@@ -1,11 +1,12 @@
-import PrinceList from "../components/PrinceListComponents";
+import ListPrice from "../components/ListPrice";
+
 
 function PrincipalPage(){
     return(
         <>
-            Hello World - Table 
             
-            <PrinceList></PrinceList>
+            
+            <ListPrice/>
         </>
     );
 

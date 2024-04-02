@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { Button } from "react-bootstrap";
+import {Table} from 'react-bootstrap/Table'; 
+
 function PrinceList (){
 
     let valor_a = 4
@@ -9,6 +11,8 @@ function PrinceList (){
 function acaobotao(){
     SetTotal(Total + 1)
     console.log("Total");
+
+
 }
 
 return(
