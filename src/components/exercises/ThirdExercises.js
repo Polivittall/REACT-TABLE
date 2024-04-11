@@ -25,7 +25,9 @@ function ThirdExercises() {
 
     return (
         <>
-            <div class="container pt-2">
+        <div class="card"></div>
+            <div class="container pt-2" >
+                
 
                 <div class="card-tittle p-2 border-bottom card-header">
                     <h5>Exercício 3</h5>
@@ -49,7 +51,7 @@ function ThirdExercises() {
                             <input
                                 class="form-control"
                                 type="number"
-                                disable={!time_nome}
+                                disabled={!time_nome}
                                 onChange={chanceVictory}></input>
                         </div>
 
@@ -58,22 +60,16 @@ function ThirdExercises() {
                             <input
                                 class="form-control"
                                 type="number"
-                                disable={!time_vitoria}
+                                disabled={!time_vitoria}
                                 onChange={chanceEmpate}></input>
                         </div>
 
                         <div class="col-sm-12 col-md-2 col-lg-2">
-                            <button
-                                disable={!time_nome || !time_vitoria || !time_empates}
-                                className={class_btn}>
-                                calcular</button>
-
+                            <button disabled={!time_nome || !time_vitoria || !time_empates} className={class_btn}>calcular</button>
                         </div>
 
                     </div>
                 </div>
-
-
             </div>
         </>
 
