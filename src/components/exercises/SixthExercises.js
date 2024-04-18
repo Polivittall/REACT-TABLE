@@ -8,6 +8,12 @@ function SixthExercises() {
     let [cep, setCep] = useState();
     let [endereco, SetEndereco] = useState([]); 
     let [bairro, setBairro] = useState([]); 
+    let [uf, setUf] = useState([]); 
+    let [ddd, setDdd] = useState([]);
+    let [ibge, setIbge] = useState([]);
+    let [gia, setGia] = useState([]);
+    let [siafi, setSiafi] = useState([]);
+    let [cidade, SetCidade] = useState([]);
     let [status, setStatus] = useState({
         "variant": "",
         "message": ""
@@ -29,6 +35,12 @@ function SixthExercises() {
             console.log(response.data);
             SetEndereco(response.data)
             setBairro(response.data)
+            SetCidade(response.data)
+            setUf(response.data)
+            setDdd(response.data)
+            setIbge(response.data)
+            setGia(response.data)
+            setSiafi(response.data)
         }).catch(function (error) {
             console.log(error)
 
@@ -75,7 +87,12 @@ function SixthExercises() {
 
                 <div className='col-lg-12'>Rua: {endereco.logradouro}</div>
                 <div className='col-lg-12'>Bairro: {endereco.bairro}</div>
-
+                <div className='col-lg-12'>Cidade: {endereco.cidade}</div>
+                <div className='col-lg-12'>Uf: {endereco.uf}</div>
+                <div className='col-lg-12'>DDD: {endereco.ddd}</div>
+                <div className='col-lg-12'>IBGE: {endereco.ibge}</div>
+                <div className='col-lg-12'>GIA: {endereco.gia}</div>
+                <div className='col-lg-12'>SIAFI: {endereco.siafi}</div>
             </div>
         </>
     )
